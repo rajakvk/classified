@@ -1,0 +1,9 @@
+{{ ads.length | pluralise:{sing: 'ad', plu: 'ads'} }} listed.
+<ul>
+	<li class="row" data-ng-repeat="ad in ads">
+		<h2>{{ad.title}} <small>Posted on 21st March 2014.</small></h2>
+		<div class=""><strong>Description:</strong> {{ ad.description | capitalise }}</div>
+		<div ta-angry class="">Contact: {{ad.contact}}</div>
+		<hr>
+	</li>
+</ul>
