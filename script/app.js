@@ -13,24 +13,14 @@ taClassified.config(['$routeProvider',function($routeProvider) {
 ** TODO - rename taCtrl
 */
 
-taClassified.controller('taCtrl', ['$scope', function($scope){
-	$scope.ads = [
-		{
-			title: 'Mobile phone for sale',
-			description: "11 months old samsung galaxy, grand",
-			contact: '968 662 9541'
-		},
-		{
-			title: 'Apple 5s',
-			description: "Mint condition, 6 months old",
-			contact: '968 662 9591'
-		},
-		{
-			title: 'Room mate required',
-			description: "2BHK located @ madhapur Nandini Hotel for twin sharing",
-			contact: '9840 98430'
-		}
-	];	
+taClassified.controller('taCtrl', ['$scope','$http', function($scope, $http){
+$http({method: 'GET', url: "data/ads.json"})
+	.success(function(data, status, headers, config){
+		$scope.ads = data;
+	})
+	.error(function(data, status){
+		console.log('error'+ status);
+	});
 }]);
 
 taClassified.filter('capitalise', function(){
