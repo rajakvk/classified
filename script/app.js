@@ -14,15 +14,16 @@ taClassified.config(['$routeProvider',function($routeProvider) {
 */
 
 taClassified.controller('taCtrl', ['$scope','$http', function($scope, $http){
-$http({method: 'GET', url: "data/ads.json"})
-	.success(function(data, status, headers, config){
-		$scope.ads = data;
-	})
-	.error(function(data, status){
-		console.log('error'+ status);
-	});
+	$http({method: 'GET', cache: false, url: "data/ads.json"})
+		.success(function(data, status, headers, config){
+			$scope.ads = data;
+		})
+		.error(function(data, status){
+			console.log('error'+ status);
+		});
 }]);
 
+// Filter skeleton 
 taClassified.filter('capitalise', function(){
 	return function(str) {
 		if(typeof str != 'string') return;
@@ -38,6 +39,7 @@ taClassified.filter('pluralise', function(){
 	}
 });
 
+// directive skeleton
 taClassified.directive('ta-angry', function(){
 	return {
 		restrict: 'E',
