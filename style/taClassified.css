@@ -1,0 +1,11 @@
+.container-fluid {
+    padding: 0 15px;
+}
+.container-fluid .row {
+    margin: 0;
+}
+.navbar-inverse {
+  background-color: #172841;
+  border-color: #80bb01;
+  border-width: 0 0 5px 0;
+}

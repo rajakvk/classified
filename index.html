@@ -4,11 +4,39 @@
 	<meta charset="utf-8">
 	<title>Angular demo</title>
 	<link rel="stylesheet" type="text/css" href="style/vendor/bootstrap.css"/>	
+	<link rel="stylesheet" type="text/css" href="style/taClassified.css"/>	
 </head>
 <body>
+	<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top clearfix" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">TechAspect Classified</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 	<div class="container-fluid">
-		<div data-ng-view="">loading...</div>
-	</div>
+
+		<div class="row" style="padding-top: 53px" data-ng-view="">loading...</div>
+	
+		<footer>
+	        <p>&copy; Copyright 2014 TechAspect</p>
+	    </footer>
+    </div>
 	
 	<!-- Production
 	<script src="build/global.min.js"></script>
@@ -23,6 +51,6 @@
 	<script src="script/vendor/bootstrap.js"></script>
 	<script src="script/vendor/angular.js"></script>
 	<script src="script/vendor/angular-route.js"></script>
-	<script src="script/app.js"></script>	
+	<script src="script/app.js"></script>
 </body>
 </html>
