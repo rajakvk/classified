@@ -24,7 +24,13 @@ taClassified.controller('taCtrl', ['$scope', function($scope){
 			title: 'Apple 5s',
 			description: "Mint condition, 6 months old",
 			contact: '968 662 9591'
-		}	];	
+		},
+		{
+			title: 'Room mate required',
+			description: "2BHK located @ madhapur Nandini Hotel for twin sharing",
+			contact: '9840 98430'
+		}
+	];	
 }]);
 
 taClassified.filter('capitalise', function(){
