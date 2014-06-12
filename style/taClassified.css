@@ -16,10 +16,11 @@
 	padding-bottom: 10px;
 }
 .register-form label{
- 	width: 10%;
+ 	  font-size: 12px;
+    width: 30%;
  }
  .register-form input[type="text"],.register-form input[type="password"],.register-form input[type="email"]{
- 	width: 20%;
+ 	width: 65%;
  }
 .invalid{
 	border: 1px solid #FF0000;
@@ -27,15 +28,55 @@
 .error-message{
 	color: #FF0000;
 	display:inline;
+  font-size:10px;
 }
-.register-form button[type="submit"]{
+.primary-button{
 	background-color: #101010;
-    border: 2px solid #80BB01;
-    color: #777777;
-    padding: 5px 35px;
-    font-weight: 700;
+  border: 2px solid #80BB01;
+  color: #777777;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 15px;
+  margin-right:15px;
 }
 .register-form button[type="submit"]:hover,.register-form button[type="submit"]:focus{
 	color:#ffffff;
 	background-color:#000000;
+}
+h2{
+  font-size: 20px;
+}
+@media screen and (min-width: 600px){
+
+  /*Sign Up form styles*/
+
+  .register-form label{
+    width: 20%;
+    font-size:13px;
+   }
+  .register-form input[type="text"],.register-form input[type="password"],.register-form input[type="email"]{
+    width: 40%;
+   }
+  .error-message{
+    font-size:14px;
+  }
+  .primary-button{
+    font-size:14px;
+    padding: 5px 35px;
+  }
+}
+@media screen and (min-width:992px){
+
+  /*Sign Up form styles*/
+
+  .register-form label{
+    width: 12%;
+    font-size:14px;
+   }
+   .register-form input[type="text"],.register-form input[type="password"],.register-form input[type="email"]{
+    width: 20%;
+   }
+   h2{
+    font-size:30px
+   }
 }
