@@ -6,7 +6,8 @@ var taClassified = angular.module('taClassified', ['ngRoute']);
 
 taClassified.config(['$routeProvider',function($routeProvider) {
 	$routeProvider
-		.when('/', { templateUrl: 'template/home.html', controller: 'taCtrl'});
+		.when('/', { templateUrl: 'template/home.html', controller: 'taCtrl'})
+		.when('/register', { templateUrl: 'template/register.html', controller: 'signupCtrl'});
 }]);
 
 /* 
@@ -22,6 +23,20 @@ taClassified.controller('taCtrl', ['$scope','$http', function($scope, $http){
 			console.log('error'+ status);
 		});
 }]);
+
+// Signup controller
+taClassified.controller('signupCtrl', ['$scope', function($scope) {
+	  $scope.submitted = false;
+	  $scope.submitForm = function() {
+	    if ($scope.signupForm.$valid) {
+	      // Submit as normal
+	      console.log("done");
+	    }
+	    else
+	    	$scope.signupForm.submitted = true;
+	    	console.log("error");
+	}
+}]); 
 
 // Filter skeleton 
 taClassified.filter('capitalise', function(){

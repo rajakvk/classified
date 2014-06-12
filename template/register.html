@@ -1,0 +1,53 @@
+<h2>Register for posting an AD</h2>
+<form class="register-form" name="signupForm" ng-submit="submitForm()" novalidate>
+    <div class="row">
+	    <label>EMAIL</label>
+	    <input type="email" 
+	      placeholder="Email" 
+	      name="email" 
+	      ng-class="{ 'invalid' : signupForm.submitted && !signupForm.name.$focused }"
+	      ng-model="signup.email" 
+	      ng-focus required  />
+	     <div class="error-message" ng-show="signupForm.name.$invalid && signupForm.name.$dirty  && !signupForm.name.$focused || signupForm.submitted">
+			<span ng-show="signupForm.email.$error.required">Required !</span>
+			<span ng-show="signupForm.email.$error.email">This is not a valid email.</span>
+		</div>	     
+    </div> 
+    <div class="row">
+	    <label>PASSWORD</label>
+	    <input type="password" 
+	     placeholder="Password" 
+	     name="password" 
+	     ng-class="{ 'invalid' : signupForm.submitted && !signupForm.name.$focused}"
+	     ng-model="signup.password" 
+	     ng-minlength=8 ng-maxlength=20 required  ng-focus/>
+	    <div class="error-message" ng-show="signupForm.submitted && !signupForm.name.$focused">
+			<span ng-show="signupForm.password.$error.required">Required !</span>
+			<span ng-show="signupForm.password.$error.minlength">Enter atleast 8 characters.</span>
+			<span ng-show="signupForm.password.$error.maxlength">Password should be less than 20 characters.</span>
+		</div>	
+	</div>
+	<div class="row">
+	    <label>Phone Number</label>
+	    <input type="text" 
+	     placeholder="number" 
+	     name="number"
+	     ng-class="{ 'invalid' : signupForm.number.$error.number || signupForm.number.$error.minlength }"
+	     ng-model="signup.number" 
+	     ng-minlength=10
+	     ng-maxlength=11  ng-focus />
+	    <div class="error-message" ng-show="signupForm.submitted">
+	    	<span ng-show="signupForm.number.$invalid">This is not a valid number.</span>
+			<span ng-show="signupForm.number.$error.minlength">Enter 10 digit number.</span>
+			<span ng-show="signupForm.number.$error.maxlength">Number should be less than 11 digit.</span>
+		</div>
+	</div>		
+	<div class="row">  
+	    <label>Gender</label>
+        <input type="radio" ng-model="gender" value="Male">  Male 
+		<input type="radio" ng-model="gender" value="Female"> Female 
+    </div> 	 
+	<button type="submit">RegisterNow</button>
+	<span>Already Registered <a href="/login"> Log in</a></span>
+</form>
+

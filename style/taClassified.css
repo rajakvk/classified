@@ -9,3 +9,33 @@
   border-color: #80bb01;
   border-width: 0 0 5px 0;
 }
+
+/*Sign Up form styles*/
+
+.register-form .row{
+	padding-bottom: 10px;
+}
+.register-form label{
+ 	width: 10%;
+ }
+ .register-form input[type="text"],.register-form input[type="password"],.register-form input[type="email"]{
+ 	width: 20%;
+ }
+.invalid{
+	border: 1px solid #FF0000;
+}
+.error-message{
+	color: #FF0000;
+	display:inline;
+}
+.register-form button[type="submit"]{
+	background-color: #101010;
+    border: 2px solid #80BB01;
+    color: #777777;
+    padding: 5px 35px;
+    font-weight: 700;
+}
+.register-form button[type="submit"]:hover,.register-form button[type="submit"]:focus{
+	color:#ffffff;
+	background-color:#000000;
+}
