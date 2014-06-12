@@ -70,3 +70,11 @@ taClassified.directive('ta-angry', function(){
 		}
 	};
 });
+
+taClassified.directive('topNav', function() {
+	return {
+		restrict: 'E',
+		replace: true,
+		templateUrl: 'template/topNavigation.html',		
+	};
+});
