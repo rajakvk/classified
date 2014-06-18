@@ -1,0 +1,31 @@
+<h2 class="form-heading">Existing User Please Log in</h2>
+<form class="login-form classified-form" name="loginForm" ng-submit="submitLogIn()" ng-controller="formCtrl" novalidate>
+    <div class="row">
+	    <label>EMAIL</label>
+	    <input type="email" 
+	      placeholder="Email" 
+	      name="email" 
+	      ng-class="{ 'invalid' : loginForm.submitted && !loginForm.name.$focused }"
+	      ng-model="login.email" 
+	      ng-focus required  />
+	     <div class="error-message" ng-show="loginForm.name.$invalid && loginForm.name.$dirty  && !loginForm.name.$focused || loginForm.submitted">
+			<span ng-show="loginForm.email.$error.required">Required !</span>
+			<span ng-show="loginForm.email.$error.email">This is not a valid email.</span>
+		</div>	     
+    </div> 
+    <div class="row">
+	    <label>PASSWORD</label>
+	    <input type="password" 
+	     placeholder="Password" 
+	     name="password" 
+	     ng-class="{ 'invalid' : loginForm.submitted && !loginForm.name.$focused}"
+	     ng-model="login.password" 
+	     ng-minlength=8 ng-maxlength=20 required  ng-focus/>
+	    <div class="error-message" ng-show="loginForm.submitted && !loginForm.name.$focused">
+			<span ng-show="loginForm.password.$error.required">Required !</span>
+			<span ng-show="loginForm.password.$error.minlength">Enter atleast 8 characters.</span>
+			<span ng-show="loginForm.password.$error.maxlength">Password should be less than 20 characters.</span>
+		</div>	
+	</div>
+	<button class="primary-button" type="submit">Log in</button>
+<form>	

@@ -1,5 +1,5 @@
-<h2>Register for posting an AD</h2>
-<form class="register-form" name="signupForm" ng-submit="submitForm()" novalidate>
+<h2 class="form-heading">Register for posting an AD</h2>
+<form class="register-form classified-form" name="signupForm" ng-submit="submitForm()" novalidate ng-controller="formCtrl">
     <div class="row">
 	    <label>EMAIL</label>
 	    <input type="email" 
@@ -30,7 +30,7 @@
 	<div class="row">
 	    <label>Phone Number</label>
 	    <input type="text" 
-	     placeholder="number" 
+	     placeholder="Number" 
 	     name="number"
 	     ng-class="{ 'invalid' : signupForm.number.$error.number || signupForm.number.$error.minlength }"
 	     ng-model="signup.number" 
@@ -48,6 +48,6 @@
 		<input type="radio" ng-model="gender" value="Female"> Female 
     </div> 	 
 	<button type="submit" class="primary-button">RegisterNow</button>
-	<span>Already Registered <a href="/login"> Log in</a></span>
+	<span>Already Registered <a href=""  ng-click="logIn()"> Log in</a></span>
 </form>
 

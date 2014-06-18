@@ -1,4 +1,4 @@
-<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top clearfix" role="navigation">
+<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top clearfix" role="navigation" ng-controller="navCtrl">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="container-fluid">
         <div class="navbar-header">
@@ -18,8 +18,8 @@
                 <li><a href="#">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-            	<li><a href="#/register">Sign Up</a></li>
-            	<li><a href="#">Log in</a></li>
+            	<li><a href="" ng-click="signUp()">Sign Up</a></li>
+            	<li><a href="#" ng-click="logIn()">Log in</a></li>
             </ul>
         </div>
     </div>
