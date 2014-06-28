@@ -1,16 +1,16 @@
 //Navigation Controller
 
-taClassified.controller('navCtrl', ['$scope','ngDialog', function($scope, ngDialog){
+taClassified.controller('navCtrl', ['$scope','ngDialog','settings', function($scope, ngDialog, settings){
 	$scope.signUp = function () {
 		ngDialog.open({
-			template: 'template/register.html',
+			template: settings.urlRegister,
 			className: 'ngdialog-theme-default',
 		});			
 	};	
 	$scope.logIn = function () {
 		ngDialog.close();
 		ngDialog.open({
-			template: 'template/login.html',
+			template: settings.urlLogin,
 			className: 'ngdialog-theme-default',
 		});			
 	};	

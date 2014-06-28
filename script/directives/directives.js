@@ -15,10 +15,10 @@ taClassified.directive('ta-angry', function(){
 	};
 });
 
-taClassified.directive('topNav', function() {
+taClassified.directive('topNav',['settings', function(settings) {
 	return {
 		restrict: 'E',
 		replace: true,
-		templateUrl: 'template/topNavigation.html',		
+		templateUrl: settings.urlTopNavigation
 	};
-});
+}]);
