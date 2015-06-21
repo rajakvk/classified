@@ -1,3 +1,6 @@
+## Introduction
+This small project may be used as a internal classified hosted in intranet. Still WIP
+
 ## Install Software
 1. Install GIT http://git-scm.com/
 2. Install tortoiseGIT https://code.google.com/p/tortoisegit/
